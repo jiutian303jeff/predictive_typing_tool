@@ -55,7 +55,7 @@ typing_ai/
 The prediction model is built from `training_content.txt`.  
 To use your own training data:
 
-1. Replace `training_content.txt` with your preferred text corpus.
+1. Replace the content in `training_content.txt` with your preferred text corpus.
 2. Delete the existing `model.pkl`.
 3. Re-run:
 ```bash
