@@ -14,7 +14,7 @@ Predicts the next word in real time and learns from your writing habits over tim
 python main.py
 ```
 
-> **Note:** `model.pkl` must exist before running. If it does not, generate it first:
+> **Note:** `model.pkl` must exist before running. If it does not, generate it first by running:
 >
 > ```bash
 > python ai_model.py
