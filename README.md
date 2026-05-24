@@ -44,7 +44,7 @@ typing_ai/
 ├── ai_model.py           # Run once to generate model.pkl from training_content.txt
 ├── training_content.txt  # Training corpus (can be customized — see below)
 ├── model.pkl             # Serialized n-gram model (auto-generated)
-├── user_stats.pkl        # Saved user writing patterns (auto-generated)
+├── user_stats.pkl        # Saved user writing patterns (auto-generated, not in default code)
 └── README.md             # This file
 ```
 
