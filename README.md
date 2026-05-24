@@ -13,14 +13,6 @@ Predicts the next word in real time and learns from your writing habits over tim
 ```bash
 python main.py
 ```
-
-> **Note:** `model.pkl` must exist before running. If it does not, generate it first:
->
-> ```bash
-> python ai_model.py
-> ```
-> This only needs to be done once.
-
 ---
 
 ## How to Use
@@ -52,7 +44,7 @@ typing_ai/
 ├── ai_model.py           # Run once to generate model.pkl from training_content.txt
 ├── training_content.txt  # Training corpus (can be customized — see below)
 ├── model.pkl             # Serialized n-gram model (auto-generated)
-├── user_stats.pkl        # Saved user writing patterns (auto-generated)
+├── user_stats.pkl        # Saved user writing patterns (auto-generated, not in default code)
 └── README.md             # This file
 ```
 
@@ -63,7 +55,7 @@ typing_ai/
 The prediction model is built from `training_content.txt`.  
 To use your own training data:
 
-1. Replace `training_content.txt` with your preferred text corpus.
+1. Replace the content in `training_content.txt` with your preferred text corpus.
 2. Delete the existing `model.pkl`.
 3. Re-run:
 ```bash
