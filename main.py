@@ -35,16 +35,33 @@ class Main():
 
     def clear_prediction(self):
         """clear the predicting word"""
-        if self.prediction and self.predict_start:
-            start = self.predict_start
-            end = f"{start} + {self.prediction_len} chars"
-            try:
-                existing = self.text.get(start, end)
-                if existing == self.prediction:
+        # Prefer deleting by tag ranges — this is robust if the surrounding
+        # text shifted (e.g. user pressed BackSpace) and the plain string
+        # at the stored indices no longer equals the original prediction.
+        try:
+            ranges = self.text.tag_ranges("predict")
+            if ranges:
+                # tag_ranges returns a list of indices [start, end, ...]
+                start = ranges[0]
+                end = ranges[1]
+                try:
                     self.text.delete(start, end)
-            except tk.TclError:
-                pass
+                except tk.TclError:
+                    pass
+        except tk.TclError:
+            # If querying tag ranges fails for any reason, fall back to
+            # previous logic to avoid losing functionality.
+            if self.prediction and self.predict_start:
+                start = self.predict_start
+                end = f"{start} + {self.prediction_len} chars"
+                try:
+                    existing = self.text.get(start, end)
+                    if existing == self.prediction:
+                        self.text.delete(start, end)
+                except tk.TclError:
+                    pass
 
+        # Always remove the visual tag so the UI returns to normal text color.
         self.text.tag_remove("predict", "1.0", "end")
         self.prediction = ""
         self.predict_start = None
@@ -85,7 +102,7 @@ class Main():
         if not words:
             return
 
-        # If the user has just completed a pair like "hello world ", record it:
+        # If the user has just completed a pair like "hello world ", record it
         if len(words) >= 2:
             prev_word = words[-2]
             curr_word = words[-1]
