@@ -13,14 +13,6 @@ Predicts the next word in real time and learns from your writing habits over tim
 ```bash
 python main.py
 ```
-
-> **Note:** `model.pkl` must exist before running. If it does not, generate it first by running:
->
-> ```bash
-> python ai_model.py
-> ```
-> This only needs to be done once.
-
 ---
 
 ## How to Use
