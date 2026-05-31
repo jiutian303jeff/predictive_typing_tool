@@ -1,6 +1,7 @@
 """
 This module only run once to create a model file based on the given training content.
-It helps to make the prediction process much faster by pre-processing the training data and storing it in a serialized format.
+It helps to make the prediction process much faster by pre-processing the training data and storing 
+it in a serialized format.
 
 """
 

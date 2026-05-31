@@ -1,3 +1,8 @@
+"""
+This module is the main entry point for the predictive typing tool. It sets up the user interface and 
+integrates the prediction logic to provide real-time suggestions as the user types.
+"""
+
 import tkinter as tk
 from prediction import Predict
 

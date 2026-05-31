@@ -1,7 +1,8 @@
 import tkinter as tk
 import re
 """
-Training content: https://statmt.org/wmt11/translation-task.html#download
+This module is essential for taking given training data and turn into dictionary.
+!! DO NOT run this individually!!
 """
 
 class Train():

@@ -73,8 +73,6 @@ python ai_model.py
 
 The new `model.pkl` will reflect your custom corpus.
 
-> Default training data source: https://statmt.org/wmt11/translation-task.html
-
 ---
 
 ## How Prediction Works

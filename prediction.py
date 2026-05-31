@@ -1,3 +1,7 @@
+"""
+This module is responsible for making predictions based on the pre-processed model and user statistics.
+"""
+
 import pickle
 import os
 import re
