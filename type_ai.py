@@ -17,19 +17,23 @@ class Train():
 
 
         #a list
-        self.part = re.split(r"[ \n,;.!?()]", self.text)
+        self.sentences = re.split(r"[\n]", self.text)
+        for i in self.sentences:
+            words = re.split(r"[ ,;.!?()]", i)
+            for x in range(len(words) - 1):
+                word = words[x]
+                next_word = words[x + 1]
 
-        #add list elements to dictionary
-        for i in range(len(self.part) - 1):
-            word = self.part[i]
-            next_word = self.part[i + 1]
+                if word not in self.dictionary:
+                    self.dictionary[word] = {}
 
-            if word not in self.dictionary:
-                self.dictionary[word] = {}
+                if next_word not in self.dictionary[word]:
+                    self.dictionary[word][next_word] = 0
 
-            if next_word not in self.dictionary[word]:
-                self.dictionary[word][next_word] = 0
+                self.dictionary[word][next_word] += 1
 
-            self.dictionary[word][next_word] += 1
 
+
+
+       
 
