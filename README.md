@@ -1,6 +1,6 @@
 ## 📢 Recent Updates
 
-### [v2.0.0] - 2026-05-31
+### 2026-05-31
 * **Sentence-Boundary Separation**: Upgraded training algorithm to isolate sentences by `\n`, completely preventing cross-sentence word contamination.
 * **Conversational Corpus**: Replaced the baseline text with a highly natural, casual English dataset for better everyday predictions.
 
