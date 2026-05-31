@@ -5,6 +5,7 @@
 * **Conversational Corpus**: Replaced the baseline text with a highly natural, casual English dataset for better everyday predictions.
 
 *For full version history and bug fixes, check out our detailed [CHANGELOG.md](./CHANGELOG.md).*
+---
 
 # Typing AI — Predictive Typing Tool
 
