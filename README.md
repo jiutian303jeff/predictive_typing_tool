@@ -1,17 +1,14 @@
 ## 📢 Recent Updates
 
+### 2026-06-01
+* **Standalone EXE Support**: Released a pre-compiled Windows executable (`.exe`). Users can now run the tool instantly without installing Python or any dependencies.
+* **Background Mode Optimization**: Configured the executable to run silently in the background, completely removing the persistent CMD/terminal window for a cleaner user experience.
+
 ### 2026-05-31
 * **Sentence-Boundary Separation**: Upgraded training algorithm to isolate sentences by `\n`, completely preventing cross-sentence word contamination.
 * **Conversational Corpus**: Replaced the baseline text with a highly natural, casual English dataset for better everyday predictions.
 
 *For full version history and bug fixes, check out our detailed [CHANGELOG.md](./CHANGELOG.md).*
----
-
-# Typing AI — Predictive Typing Tool
-
-A lightweight, AI-assisted typing tool built with Python and Tkinter.  
-Predicts the next word in real time and learns from your writing habits over time.
-
 ---
 
 ## Quick Start
