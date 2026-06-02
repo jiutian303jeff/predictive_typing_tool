@@ -13,13 +13,9 @@
 
 ## Quick Start
 
-1. Make sure Python 3 is installed.
-2. Run the following command in the project folder:
+1. Download all files
+2. Click main.exe to run
 
-```bash
-python main.py
-```
----
 
 ## How to Use
 
@@ -45,6 +41,7 @@ python main.py
 ```
 typing_ai/
 ├── main.py               # GUI entry point (Tkinter)
+├── main.exe               # Click to run
 ├── prediction.py         # Prediction logic (loads model, returns candidates)
 ├── type_ai.py            # Builds word-frequency dictionary from training text
 ├── ai_model.py           # Run once to generate model.pkl from training_content.txt
@@ -90,5 +87,5 @@ No external packages required.
 ## Known Limitations
 
 - Predictions only trigger at the end of the document (cursor must be at the end).
-- The model predicts one word at a time; multi-word suggestions are not supported.
+- The model predicts one word at a time; multi-word suggestions are not supported yet.
 - Prediction quality depends on how closely the training corpus matches your writing style. Customizing `training_content.txt` is recommended for best results.
