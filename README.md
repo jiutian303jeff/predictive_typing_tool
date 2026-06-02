@@ -1,3 +1,7 @@
+
+
+# Predictive AI typing tool
+-----
 ## 📢 Recent Updates
 
 ### 2026-06-01
@@ -11,7 +15,6 @@
 *For full version history and bug fixes, check out our detailed [CHANGELOG.md](./CHANGELOG.md).*
 ---
 
-# Predictive AI typing tool
 ## Quick Start
 
 1. Download all files
